@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content and Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        form { margin-top: 20px; }
+        fieldset { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; }
+        input, textarea, select { width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box; }
+        input[type="radio"], input[type="checkbox"] { width: auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Music Enthusiast Page</h1>
+        <p>This page showcases HTML5 content elements and a comprehensive form for user interaction.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Popular Music Genres</h2>
+            <p>Here is an unordered list of some popular music genres:</p>
+            <ul>
+                <li>Rock - Energetic and guitar-driven.</li>
+                <li>Pop - Catchy melodies and broad appeal.</li>
+                <li>Jazz - Improvisational and rhythmic complexity.</li>
+                <li>Hip-Hop - Beats and lyrical storytelling.</li>
+                <li>Classical - Orchestral and timeless compositions.</li>
+            </ul>
+
+            <p>And an ordered list of steps to enjoy music:</p>
+            <ol>
+                <li>Choose your favorite genre.</li>
+                <li>Select a playlist or album.</li>
+                <li>Put on headphones or speakers.</li>
+                <li>Relax and listen.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Upcoming Concerts Schedule</h2>
+            <p>The following table displays a schedule of upcoming concerts:</p>
+            <table>
+                <caption>Concert Schedule for 2025</caption>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Artist</th>
+                        <th>Venue</th>
+                        <th>Tickets Available</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-09-15</td>
+                        <td>Rock Band X</td>
+                        <td>Arena Stadium</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>2025-10-20</td>
+                        <td>Pop Star Y</td>
+                        <td>City Hall</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>2025-11-05</td>
+                        <td>Jazz Ensemble Z</td>
+                        <td>Jazz Club</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">More dates to be announced.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>Embedded Media</h2>
+            <p>Enjoy some sample media content:</p>
+            
+            <figure>
+                <img src="image.jpg" alt="A lively concert."   width="300"  height="400">
+                <figcaption>Concert Image Example</figcaption>
+            </figure>
+
+            <figure>
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <figcaption>Sample Audio Track</figcaption>
+            </figure>
+
+            <figure>
+                <video controls width="600">
+                    <source src="Concert.video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Sample Video Clip</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Contact and Registration Form</h2>
+            <p>Please fill out the form below to register or contact us. All fields marked with * are required.</p>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="full-name">Full Name*:</label>
+                    <input type="text" id="full-name" name="full-name" required placeholder="Enter your full name" autocomplete="name" minlength="3">
+
+                    <label for="email">Email Address*:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email" autocomplete="email">
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" autocomplete="tel">
+
+                    <label for="birthdate">Date of Birth:</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <label for="username">Username*:</label>
+                    <input type="text" id="username" name="username" required minlength="5" placeholder="Choose a username">
+
+                    <label for="password">Password*:</label>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder="Enter a strong password">
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="18" max="100" placeholder="Enter your age">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label for="genre">Favorite Genre*:</label>
+                    <select id="genre" name="genre" required>
+                        <option value="">Select one</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="hiphop">Hip-Hop</option>
+                        <option value="classical">Classical</option>
+                    </select>
+
+                    <p>Music Interests:</p>
+                    <input type="checkbox" id="live-concerts" name="interests" value="live-concerts">
+                    <label for="live-concerts">Live Concerts</label><br>
+                    <input type="checkbox" id="streaming" name="interests" value="streaming">
+                    <label for="streaming">Streaming Services</label><br>
+                    <input type="checkbox" id="vinyl" name="interests" value="vinyl">
+                    <label for="vinyl">Vinyl Records</label>
+
+                    <p>Subscription Level:</p>
+                    <input type="radio" id="basic" name="subscription" value="basic" required>
+                    <label for="basic">Basic (Free)</label><br>
+                    <input type="radio" id="premium" name="subscription" value="premium">
+                    <label for="premium">Premium (Paid)</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Comments</legend>
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
+
+                    <label for="referral">Referral Code (readonly example):</label>
+                    <input type="text" id="referral" name="referral" value="ABC123" readonly>
+                </fieldset>
+
+                <input type="submit" value="Submit Form">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Music Enthusiast Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>
